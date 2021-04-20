@@ -1,4 +1,5 @@
-#%%
+#%% 
+# Open and process the file to obtain the parameter values
 fh = open('f.txt')
 first_line = fh.readline()[:-1]
 (time, intersections, streets, cars, score)  = tuple(first_line.split(' '))
@@ -6,6 +7,7 @@ first_line = fh.readline()[:-1]
 print(time, intersections, streets, cars, score)
 
 #%%
+# Process the file to extract the street details
 unique_streets = {}
 for i in range(streets):
     (start, end, cur_street, traversal_time) = fh.readline()[:-1].split(' ')
@@ -15,6 +17,7 @@ for i in range(streets):
 print(unique_streets)
 
 #%%
+# Process the file to extract the path details
 car_paths = []
 path_lengths = []
 for i in range(cars):
@@ -28,29 +31,30 @@ print(path_lengths)
 fh.close()
 
 #%%
-used_street_names = {}
+used_street_names = {} 
 intersection_data = {}
 for i in range(len(path_lengths)):
-    cur_car = path_lengths[i][0]
-    cur_path = car_paths[cur_car]
+    cur_car = path_lengths[i][0] # Extract the current car from the path lists
+    cur_path = car_paths[cur_car] # Extract the specific path of the current car
     print(cur_car, cur_path)
     sim_time = 0
     prev_traversal_time = 0
     for j in range(len(cur_path)):
-        street = cur_path[j]
+        street = cur_path[j] # Extract the next street of the current path
         try:
-            used_street_names[street] += 1
+            used_street_names[street] += 1 # If street already used, ignore
             continue
         except:
-            used_street_names[street] = 0
+            used_street_names[street] = 0 # If street unused, get its details 
             (start, end, traversal_time) = unique_streets[street] 
             try:
-                    intersection_data[end].append(street)
+                    intersection_data[end].append(street) # If not empty, append
             except:
-                    intersection_data[end] = [street]
+                    intersection_data[end] = [street] # If empty, make a list
 print(intersection_data)
 
 #%%
+# Prepare output file
 fh = open('f_results.txt', 'w')
 total_intersections = len(intersection_data.keys())
 fh.writelines(str(total_intersections) + '\n')
