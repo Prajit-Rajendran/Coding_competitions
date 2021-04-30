@@ -14,14 +14,14 @@ def nike_challenge_solution():
      		return 0 # If there is no cash, 0 objects can be bought
 
 	while cash > 0:
-    		for i in range(len(pr)):
-        		#print(cash, pr[i])
-        		if (cash - pr[i]) < 0: # If current object can't be bought, cash is exhausted
+    		for i in range(len(prices)):
+        		#print(cash, prices[i])
+        		if (cash - prices[i]) < 0: # If current object can't be bought, cash is exhausted
             			cash = -1
             			print(count)
-           			break
+						break
         		else:
-            			cash -= pr[i] # If we can buy the object, reduce the cash reserve
+            			cash -= prices[i] # If we can buy the object, reduce the cash reserve
             			count += 1 # Increment counter for objects bought
 	return count
 
