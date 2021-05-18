@@ -1,0 +1,17 @@
+Random forest regressor is chosen as the backbone algorithm
+
+Missing data was imputed using bfill
+
+Standard scaling was used for numerical features
+
+One hot encoding was used for cloud_level
+
+turbine_status, datetime and tracking_id were dropped
+
+Train-validation split of 80-20
+
+Trained 5 different RF regressors with different random state
+
+MAE used as evaluation metric
+
+Used average of ensemble as test prediction
