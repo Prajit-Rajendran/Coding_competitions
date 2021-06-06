@@ -1,0 +1,26 @@
+Data is located in: https://www.kaggle.com/infernape/fast-furious-and-insured
+
+Notebook for training is in: https://www.kaggle.com/prajittr/insurance-task-mobilenet-rank-9-score-54-57/
+
+Random forest regressor is chosen as the backbone algorithm for amount prediction
+Transfer learning on MobileNet (Computer vision) is used as the backbone for condition classification
+
+Amount prediction:
+
+Missing data was imputed using bfill
+Dropped expiry date feature
+Standard scaling was used for numerical features
+Label encoding was used for Insurance_company
+Train-validation split of 80-20
+Trained RF regressor
+MAE used as evaluation metric- obtained 2050.06
+
+Condition prediction:
+
+Resize images to 224 x 224
+Scale images from between -0.5 and 0.5
+MobileNet base model freeze first 80 layers and perform transfer learning
+Convert label to categorical
+Adam optimizer, categorical cross entropy loss, batch size 32, learning rate 0.002, epochs = 5
+Got validation accuray of 95.36%
+
