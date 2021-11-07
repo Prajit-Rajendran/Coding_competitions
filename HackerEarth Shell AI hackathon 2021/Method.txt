@@ -1,4 +1,11 @@
+Basic approach
+-Take data points 10 minutes apart to generate sequences
+-Perform manual feature selection
+-Train single LSTM to predict cloud cover % over 120 min
+-In test set, predict next values for 120 min for each scenario and then use 30,60,90,120 min values to make the submission file
+
+VAE approach
 -Convert images to latent vectors of size 10 using the Variational Autoencoder approach
 -Combine with 14 other features (except time and date) to get data vectors for size 24
--Train LSTM to predict cloud cover % over 30 min, 60 min, 90 min and 120 min
+-Train multiple LSTMs to predict cloud cover % over 30 min, 60 min, 90 min and 120 min
 -Take last 3,6,9 or 12 data points in each test scenario set and predict the cloud cover based on the trained LSTM models
