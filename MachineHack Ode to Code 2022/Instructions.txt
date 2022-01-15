@@ -1,0 +1,20 @@
+Independent Variables
+
+edible-poisonous: edible=e, poisonous=p
+cap-diameter: float number in cm
+cap-shape: bell=b, conical=c, convex=x, flat=f, sunken=s, spherical=p, others=o
+cap-color: brown=n, buff=b, gray=g, green=r, pink=p, purple=u, red=e, white=w, yellow=y, blue=l, orange=o, black=k
+does-bruise-bleed: bruises-or-bleeding=t,no=f
+gill-attachment: adnate=a, adnexed=x, decurrent=d, free=e, sinuate=s, pores=p, none=f
+gill-color: see cap-color + none=f
+stem-height: float number in cm
+stem-width: float number in mm
+stem-color: see cap-color + none=f
+has-ring: ring=t, none=f
+ring-type: cobwebby=c, evanescent=e, flaring=r, grooved=g, large=l, pendant=p, sheathing=s, zone=z, scaly=y, movable=m, none=f
+habitat: grasses=g, leaves=l, meadows=m, paths=p, heaths=h, urban=u, waste=w, woods=d
+
+
+Dependent variable
+
+season: spring=s, summer=u, autumn=a, winter=w
