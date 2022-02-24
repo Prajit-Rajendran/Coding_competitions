@@ -5,5 +5,6 @@ Here are some of the coding competitions that I participated in, along with the 
 * A Fine Windy Day: HackerEarth Machine Learning challenge (RANK 209) [https://www.hackerearth.com/problem/machine-learning/predict-the-power-kwh-produced-from-the-windmills-8-f055f832/]
 * HackerEarth Machine Learning Challenge: How to not lose a customer in 10 days (RANK 331)
 * Google HashCode 2021 (RANK 2700)
+* Google HashCode 2022 (RANK 2600)
 * Times Internet Machine Learning Challenge @TechGig (RANK 3416) [https://www.techgig.com/codegladiators/machine-learning]
 * Google HashCode 2020 (RANK 5000)
